@@ -18,4 +18,10 @@ To fix that on a CentOS/RHEL system, run the following:
 No installation issues to report
 
 # Using the CLI
+
+## Getting Started
 https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli
+
+## Samples
+https://github.com/Azure/azure-cli-samples/blob/master/compute/compute.md
+
