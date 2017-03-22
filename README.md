@@ -17,5 +17,5 @@ To fix that on a CentOS/RHEL system, run the following:
 ## Mac 
 No installation issues to report
 
-
+# Using the CLI
 https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli
