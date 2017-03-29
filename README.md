@@ -53,3 +53,6 @@ To sign in, use a web browser to open the page https://aka.ms/devicelogin and en
   }
 ]
 ```
+
+After successfully logging in, you can start using various commands to manage resources in Azure.  Let's take a look at managing virtual machines, storage, and databases.
+
