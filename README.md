@@ -75,6 +75,10 @@ $ az group create -n wordpress_resource_group -l westus2
 }
 ```
 
+the location:
+Azure is generally available in 34 regions around the world, with plans announced for 4 additional regions. 
+
+
 ## Create a VM
 Note VM naming conventions:
 ```
