@@ -85,6 +85,9 @@ Note VM naming conventions:
 Linux host name cannot exceed 64 characters in length or contain the following characters: ` ~ ! @ # $ % ^ & * ( ) = + _ [ ] { } \\ | ; : ' \" , < > / ?
 ```
 
+Get a list of VM images
+`az vm image list | grep urnAlias`
+
 ```
 $ az vm create -n wordpressvm -g wordpress_resource_group --image UbuntuLTS --data-disk-sizes-gb 10
 {
