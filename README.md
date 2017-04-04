@@ -6,7 +6,7 @@ Available on macOS, Linux, and Windows.
 https://docs.microsoft.com/en-us/cli/azure/install-azure-cli
 
 ## Linux
-Requires GCC and development libs to be installed to be installed or you may see the following error:
+Requires GCC and development libs to be installed or you may see the following error:
 
     error: command 'gcc' failed with exit status 1
 
@@ -86,7 +86,24 @@ Linux host name cannot exceed 64 characters in length or contain the following c
 ```
 
 Get a list of VM images
-`az vm image list | grep urnAlias`
+```
+$ az vm image list | grep urnAlias
+14:36 $ az vm image list | grep urnAlias
+You are viewing an offline list of images, use --all to retrieve an up-to-date list
+    "urnAlias": "Win2016Datacenter",
+    "urnAlias": "Win2012R2Datacenter",
+    "urnAlias": "Win2008R2SP1",
+    "urnAlias": "Win2012Datacenter",
+    "urnAlias": "UbuntuLTS",
+    "urnAlias": "CentOS",
+    "urnAlias": "openSUSE-Leap",
+    "urnAlias": "RHEL",
+    "urnAlias": "SLES",
+    "urnAlias": "Debian",
+    "urnAlias": "CoreOS",
+```
+
+Use --all to get an extended list of available images.  Running with --all may take several minutes to complete as the CLI tool will be making an extended query to get all available images.  For our exploration, using the default listing should suffice.
 
 ```
 $ az vm create -n wordpressvm -g wordpress_resource_group --image UbuntuLTS --data-disk-sizes-gb 10
