@@ -24,6 +24,11 @@ https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli
 
 ## Samples
 https://github.com/Azure/azure-cli-samples/blob/master/compute/compute.md
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli
+
+## Commone Azure CLI Commands on Linux and Mac (old CLI)
+https://docs.microsoft.com/en-us/azure/virtual-machines/linux/cli-manage?toc=%2fazure%2fvirtual-machines%2flinux%2ftoc.json
+
 
 ## Logging in
 Log in using the `az login` command.  Running the commnad returns a code and a URL: https://aka.ms/devicelogin.  Enter the code in the form and submit.  
@@ -138,4 +143,6 @@ sudo apt-get upgrade -y
 # Create a Database
 
 
+# Remove the Resource Group (and all associated resources!)
+az group delete --name myResourceGroup
 
