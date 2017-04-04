@@ -103,7 +103,9 @@ You are viewing an offline list of images, use --all to retrieve an up-to-date l
     "urnAlias": "CoreOS",
 ```
 
-Use --all to get an extended list of available images.  Running with --all may take several minutes to complete as the CLI tool will be making an extended query to get all available images.  For our exploration, using the default listing should suffice.
+Use --all to get an extended list of available images.  Running with --all may take several minutes to complete as the CLI tool will be making an extended query to get all available images.  Also note that the extended listing does not include the urnAlias field.  If you're trying to parse out the image names, simply grep for urn.  
+
+For our exploration, using the default listing should suffice.
 
 ```
 $ az vm create -n wordpressvm -g wordpress_resource_group --image UbuntuLTS --data-disk-sizes-gb 10
