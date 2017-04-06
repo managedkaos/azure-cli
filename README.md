@@ -161,7 +161,83 @@ sudo apt-get upgrade -y
 
 # Create a Database
 
+## Errors
+- Location is required: `az sql server create: error: argument --location/-l is required`
+- Server name must be unique `The name 'devsql01.database.windows.net' already exists. Choose a different name.`
 
+The database
+```
+az sql server create --name devsql-$(date +%s) --resource-group dev_group --location westus2 --admin-user devamin --admin-password SRmPjh83wH4qeLUe
+  1 {
+{
+  "administratorLogin": "devamin",
+  "administratorLoginPassword": "SRmPjh83wH4qeLUe",
+  "externalAdministratorLogin": null,
+  "externalAdministratorSid": null,
+  "fullyQualifiedDomainName": "devsql-1491520354.database.windows.net",
+  "id": "/subscriptions/2b97ffe3-a4ad-4f78-8d71-3494bf3c731d/resourceGroups/dev_group/providers/Microsoft.Sql/servers/devsql-1491520354",
+  "kind": "v12.0",
+  "location": "West US 2",
+  "name": "devsql-1491520354",
+  "resourceGroup": "dev_group",
+  "state": "Ready",
+  "tags": null,
+  "type": "Microsoft.Sql/servers",
+  "version": "12.0"
+}
+```
+
+The firewall
+```
+az sql server firewall-rule create --resource-group dev_group --server devsql-1491520354 -n AllowYourIp --start-ip-address 52.183.81.57 --end-ip-address 52.183.81.57
+{
+  "endIpAddress": "52.183.81.57",
+  "id": "/subscriptions/2b97ffe3-a4ad-4f78-8d71-3494bf3c731d/resourceGroups/dev_group/providers/Microsoft.Sql/servers/devsql-1491520354/firewallRules/AllowYourIp",
+  "kind": "v12.0",
+  "location": "West US 2",
+  "name": "AllowYourIp",
+  "resourceGroup": "dev_group",
+  "startIpAddress": "52.183.81.57",
+  "type": "Microsoft.Sql/servers/firewallRules"
+}
+```
+The database
+```
+az sql db create --resource-group dev_group --server devsql-1491520354 --name dev_db --sample-name AdventureWorksLT --service-objective S0
+{
+  "collation": "SQL_Latin1_General_CP1_CI_AS",
+  "containmentState": 2,
+  "createMode": null,
+  "creationDate": "2017-04-06T23:22:37.827000+00:00",
+  "currentServiceObjectiveId": "f1173c43-91bd-4aaa-973c-54e79e15235b",
+  "databaseId": "61befa5a-6a90-4eae-9e05-d326f1153581",
+  "defaultSecondaryLocation": "West Central US",
+  "earliestRestoreDate": "2017-04-06T23:33:11.080000+00:00",
+  "edition": "Standard",
+  "elasticPoolName": null,
+  "failoverGroupId": null,
+  "id": "/subscriptions/2b97ffe3-a4ad-4f78-8d71-3494bf3c731d/resourceGroups/dev_group/providers/Microsoft.Sql/servers/devsql-1491520354/databases/dev_db",
+  "kind": "v12.0,user",
+  "location": "West US 2",
+  "maxSizeBytes": "268435456000",
+  "name": "dev_db",
+  "readScale": "Disabled",
+  "recommendedIndex": null,
+  "requestedServiceObjectiveId": "f1173c43-91bd-4aaa-973c-54e79e15235b",
+  "requestedServiceObjectiveName": "S0",
+  "resourceGroup": "dev_group",
+  "restorePointInTime": null,
+  "sampleName": null,
+  "schemas": null,
+  "serviceLevelObjective": "S0",
+  "serviceTierAdvisors": null,
+  "sourceDatabaseId": null,
+  "status": "Online",
+  "tags": null,
+  "transparentDataEncryption": null,
+  "type": "Microsoft.Sql/servers/databases"
+}
+```
 # Remove the Resource Group (and all associated resources!)
 az group delete --name myResourceGroup
 
