@@ -22,6 +22,9 @@ No installation issues to report
 ## Getting Started
 https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli
 
+## Create a single Azure SQL database using the Azure CLI
+https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-cli
+
 ## Samples
 https://github.com/Azure/azure-cli-samples/blob/master/compute/compute.md
 https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-cli
