@@ -240,7 +240,13 @@ az sql db create --resource-group dev_group --server devsql-1491520354 --name de
 ```
 
 # Connect to the Database from the VM
+
+Install the SQL Server command-line tools (will add to the VM Creation section)
 https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-connect-and-query-sqlcmd
+
+Connect to the server
+https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-connect-and-query-sqlcmd
+
 
 # Remove the Resource Group (and all associated resources!)
 az group delete --name myResourceGroup
