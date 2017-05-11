@@ -159,6 +159,25 @@ sudo apt-get update
 sudo apt-get upgrade -y
 ```
 
+# Storage
+https://docs.microsoft.com/en-us/azure/storage/storage-azure-cli
+https://docs.microsoft.com/en-us/cli/azure/storage
+```
+echo "Creating the container..."
+az storage container create -n $container_name
+
+echo "Uploading the file..."
+az storage blob upload -f $file_to_upload -c $container_name -n $blob_name
+
+echo "Listing the blobs..."
+az storage blob list -c $container_name
+
+echo "Downloading the file..."
+az storage blob download -c $container_name -n $blob_name -f $destination_file
+
+echo "Done"
+```
+
 # Create a Database
 
 ## Errors
