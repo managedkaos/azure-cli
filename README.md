@@ -266,6 +266,8 @@ https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-connect-and-query-sq
 Connect to the server
 https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-connect-and-query-sqlcmd
 
+# Connect to the DB using Python
+https://docs.microsoft.com/en-us/azure/sql-database/sql-database-connect-query-python
 
 # Remove the Resource Group (and all associated resources!)
 az group delete --name myResourceGroup
