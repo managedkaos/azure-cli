@@ -269,6 +269,24 @@ https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-connect-and-query-sq
 # Connect to the DB using Python
 https://docs.microsoft.com/en-us/azure/sql-database/sql-database-connect-query-python
 
+# Python code for connecting to NYT API
+```
+import json
+import requests
+
+url = "https://api.nytimes.com/svc/archive/v1/2017/5.json"
+headers = {}
+params = {"api-key":"................................"}
+
+
+response = requests.request("GET", url, headers=headers, params=params)
+data = response.json()
+for doc in data['response']['docs']:
+    for keywords in doc['keywords']:
+        if 'Microsoft' in keywords['value']:
+            print doc['headline']['main']
+```
+
 # Remove the Resource Group (and all associated resources!)
 az group delete --name myResourceGroup
 
