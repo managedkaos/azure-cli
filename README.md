@@ -270,6 +270,9 @@ https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-connect-and-query-sq
 https://docs.microsoft.com/en-us/azure/sql-database/sql-database-connect-query-python
 
 # Python code for connecting to NYT API
+Get an API Key: http://developer.nytimes.com/signup
+
+
 ```
 import json
 import requests
