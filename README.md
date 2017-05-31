@@ -283,6 +283,10 @@ Example
 Another example
     https://blogs.msdn.microsoft.com/cdndevs/2015/03/11/python-and-data-sql-server-as-a-data-source-for-python-applications/
 
+
+Fake Data
+    https://jsonplaceholder.typicode.com/
+    
 ```
 import json
 import requests
