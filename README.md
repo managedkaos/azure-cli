@@ -259,7 +259,6 @@ az sql db create --resource-group dev_group --server devsql-1491520354 --name de
 ```
 
 # Connect to the Database from the VM
-
 Install the SQL Server command-line tools (will add to the VM Creation section)
 https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-connect-and-query-sqlcmd
 
@@ -272,6 +271,13 @@ https://docs.microsoft.com/en-us/azure/sql-database/sql-database-connect-query-p
 # Python code for connecting to NYT API
 Get an API Key: http://developer.nytimes.com/signup
 
+# Connect to the DB using .NET Core SDK
+
+Install .NET Core SDK
+https://www.microsoft.com/net/core#linuxcentos
+
+Example
+https://github.com/Microsoft/sql-server-samples/releases/tag/iot-smart-grid-v1.0
 
 ```
 import json
