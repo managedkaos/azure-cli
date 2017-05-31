@@ -269,15 +269,19 @@ https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-connect-and-query-sq
 https://docs.microsoft.com/en-us/azure/sql-database/sql-database-connect-query-python
 
 # Python code for connecting to NYT API
-Get an API Key: http://developer.nytimes.com/signup
+Get an API Key
+    http://developer.nytimes.com/signup
 
 # Connect to the DB using .NET Core SDK
 
 Install .NET Core SDK
-https://www.microsoft.com/net/core#linuxcentos
+    https://www.microsoft.com/net/core#linuxcentos
 
 Example
-https://github.com/Microsoft/sql-server-samples/releases/tag/iot-smart-grid-v1.0
+    https://github.com/Microsoft/sql-server-samples/releases/tag/iot-smart-grid-v1.0
+
+Another example
+    https://blogs.msdn.microsoft.com/cdndevs/2015/03/11/python-and-data-sql-server-as-a-data-source-for-python-applications/
 
 ```
 import json
