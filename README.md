@@ -305,5 +305,6 @@ for doc in data['response']['docs']:
 ```
 
 # Remove the Resource Group (and all associated resources!)
+```
 az group delete --name myResourceGroup
-
+```
